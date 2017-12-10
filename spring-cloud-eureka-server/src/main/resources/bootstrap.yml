@@ -1,0 +1,22 @@
+# 最佳实践：一般我们会把与环境有关的配置放在application.yml中，相对不变的放在这个文件中，在后期直接上配置中心管理变动配置时会方便很多。
+
+spring:
+  application:
+    name: discovery
+    admin:
+      enabled: true
+
+server:
+  port: 8761 #端口号，eureka服务端默认端口号是8761
+  undertow:
+    io-threads: 4 #io线程数，一般与cpu核心数相同
+    worker-threads: 200 #工作线程数
+    
+eureka: 
+  client:
+    register-with-eureka: false #服务端不需要注册自身
+    fetch-remote-regions-registry: false
+    fetch-registry: false
+  server: 
+    enable-self-preservation: false #是否打开安全模式，默认为true,生产环境请设置为true,开发和测试环境由于需要频繁发布，可设置为false
+    
