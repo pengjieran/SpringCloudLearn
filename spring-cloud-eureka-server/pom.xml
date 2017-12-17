@@ -29,7 +29,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
-		<!--eurekaserver暂时无法切换成undertow容器，已向官方提issue -->
+		<!--eurekaserver暂时无法切换成undertow容器 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
